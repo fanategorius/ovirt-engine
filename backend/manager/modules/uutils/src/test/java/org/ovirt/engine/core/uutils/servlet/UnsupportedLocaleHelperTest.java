@@ -77,21 +77,21 @@ public class UnsupportedLocaleHelperTest {
 
     @Test
     public void testGetLocalesKeysUnSupported() {
-        unvalidatedUnsupportedLocales.add("ko_KR");
+        unvalidatedUnsupportedLocales.add("ru");
         List<String> locales = UnsupportedLocaleHelper.getLocalesKeys(ConfigValues.UnsupportedLocalesFilterOverrides);
         assertNotNull(locales, "Result should not be null");
         assertEquals(1, locales.size(), "There should be 1 locales");
-        assertEquals("ko_KR", locales.get(0), "Locale should be ko_KR");
+        assertEquals("ru", locales.get(0), "Locale should be ru");
     }
 
     @Test
     public void testGetLocalesKeysWithInvalid() {
-        unvalidatedUnsupportedLocales.add("ko_KR");
+        unvalidatedUnsupportedLocales.add("ru");
         unvalidatedUnsupportedLocales.add("abcdds");
         List<String> locales = UnsupportedLocaleHelper.getLocalesKeys(ConfigValues.UnsupportedLocalesFilterOverrides);
         assertNotNull(locales, "Result should not be null");
         assertEquals(1, locales.size(), "There should be 1 locales");
-        assertEquals("ko_KR", locales.get(0), "Locale should be ko_KR");
+        assertEquals("ru", locales.get(0), "Locale should be ru");
     }
 
     @Test
