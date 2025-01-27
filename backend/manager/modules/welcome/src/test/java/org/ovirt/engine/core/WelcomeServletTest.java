@@ -132,7 +132,6 @@ public class WelcomeServletTest {
         keys.add("ka_GE");
         keys.add("ko_KR");
         keys.add("pt_BR");
-        keys.add("zh_CN");
         keys.add("ru");
         return keys;
     }
