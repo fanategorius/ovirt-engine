@@ -80,7 +80,7 @@ public class WelcomeServletTest {
 
     @Test
     public void testDoGetHttpServletRequestHttpServletResponseWithDispatcher() throws IOException, ServletException {
-        when(mockRequest.getAttribute(LocaleFilter.LOCALE)).thenReturn(Locale.JAPANESE);
+//        when(mockRequest.getAttribute(LocaleFilter.LOCALE)).thenReturn(Locale.JAPANESE);
         when(mockRequest.getRequestDispatcher("/WEB-INF/ovirt-engine.jsp")).thenReturn(mockDispatcher);
         when(mockRequest.getRequestURL()).thenReturn(new StringBuffer("http://localhost:8080/ovirt-engine/"));
         when(mockRequest.getServletContext()).thenReturn(mockContext);
