@@ -111,6 +111,7 @@ public class UnsupportedLocaleHelperTest {
         result.add("ko_KR");
         result.add("pt_BR");
         result.add("zh_CN");
+        result.add("ru");
         return result;
     }
 }
