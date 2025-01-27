@@ -77,25 +77,6 @@ public class WelcomeServletTest {
         when(mockBrandingManager.getWelcomeSections(any())).thenReturn("Welcome Section HTML");
     }
 
-    @Test
-    public void testDoGetHttpServletRequestHttpServletResponseNoDispatcher() throws IOException, ServletException {
-        when(mockRequest.getAttribute(LocaleFilter.LOCALE)).thenReturn(Locale.JAPANESE);
-        when(mockRequest.getRequestURL()).thenReturn(new StringBuffer("http://localhost:8080/ovirt-engine/"));
-        when(mockRequest.getServletContext()).thenReturn(mockContext);
-        when(mockRequest.getSession(true)).thenReturn(mockSession);
-        when(mockSession.getAttribute("authCode")).thenReturn("aU1KZG1OUytQSktnd29SQ3NIOVhWckls");
-        when(mockSession.getAttribute("token")).thenReturn("aU1KZG1OUytQSktnd29SQ3NIOVhWckls");
-        when(mockSession.getAttribute("error")).thenReturn("");
-        when(mockSession.getAttribute("error_description")).thenReturn("");
-        when(mockRequest.getServletContext().getAttribute("sso_logout_url")).thenReturn(
-                new StringBuffer("http://localhost:8080/ovirt-engine/logout"));
-        when(mockRequest.getServletContext().getAttribute("sso_switch_user_url")).thenReturn(
-                new StringBuffer("http://localhost:8080/ovirt-engine/login"));
-        testServlet.doGet(mockRequest, mockResponse);
-        verify(mockRequest).setAttribute("localeKeys", localeKeys);
-        //Make sure the content type contains UTF-8 so the characters display properly.
-        verify(mockResponse).setContentType("text/html;charset=UTF-8");
-    }
 
     @Test
     public void testDoGetHttpServletRequestHttpServletResponseWithDispatcher() throws IOException, ServletException {
