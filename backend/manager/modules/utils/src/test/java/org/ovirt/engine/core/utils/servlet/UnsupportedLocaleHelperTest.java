@@ -71,7 +71,7 @@ public class UnsupportedLocaleHelperTest {
         List<String> locales = UnsupportedLocaleHelper.getDisplayedLocales(allLocales, displayUnsupported,
                 unSupportedLocales);
         assertNotNull(locales, "Result should not be null");
-        assertEquals(8, locales.size(), "There should be 8 locales");
+        assertEquals(8, locales.size(), "There should be 9 locales");
         assertTrue(locales.contains("de_DE"), "Locales should contain 'de_DE'");
     }
 
