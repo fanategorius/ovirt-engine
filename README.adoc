@@ -8,7 +8,7 @@ Welcome to the oVirt Engine - Open Virtualization Manager source repository.
 == How to contribute
 
 === Submitting patches
-
+хуй
 Patches are welcome!
 
 Please submit patches to https://github.com/oVirt/ovirt-engine[github.com:ovirt-engine].
